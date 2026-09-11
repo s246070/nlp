@@ -1,0 +1,5 @@
+# base requirements, no specific versioning right now
+httpx
+fastapi
+pydantic
+uvicorn[standard]
