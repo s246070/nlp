@@ -49,12 +49,13 @@ from fastapi.responses import HTMLResponse, JSONResponse
 import httpx
 import asyncio
 import json
+import os
 import random
 import time
 
 app = FastAPI()
 
-SERVICE_BASE_URL = "http://localhost:8000"
+SERVICE_BASE_URL = os.getenv("SERVICE_BASE_URL", "http://localhost:8000")
 TIMEOUT_SECONDS = 6.0
 
 
