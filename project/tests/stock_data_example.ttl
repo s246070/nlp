@@ -1,0 +1,41 @@
+
+@prefix ex: <https://example.org/stocks/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+
+# Company
+ex:vestas a ex:Company ;
+    schema:name "Vestas Wind Systems" ;
+    ex:hasListing ex:vws-co .
+
+# Stock listing
+ex:vws-co a ex:StockListing ;
+    ex:ticker "VWS.CO" ;
+    ex:currency "DKK" ;
+    ex:hasObservation ex:price001 .
+
+# Daily price observation
+ex:price001 a ex:PriceObservation ;
+    ex:tradingDate "2026-11-05"^^xsd:date ;
+    ex:openPrice "205.60"^^xsd:decimal ;
+    ex:highPrice "208.90"^^xsd:decimal ;
+    ex:lowPrice "201.30"^^xsd:decimal ;
+    ex:closePrice "205.20"^^xsd:decimal .
+
+# News article
+ex:article001 a schema:NewsArticle ;
+    schema:headline
+        "Van Oord, Vestas install final turbine at 760MW Ecowende wind farm" ;
+    schema:datePublished
+        "2026-11-03T08:30:43Z"^^xsd:dateTime ;
+    schema:url
+        <https://www.power-technology.com/news/van-oord-vestas-install-final-turbine-ecowende/> .
+
+# Example LLM relevance annotation (illustrative)
+ex:annotation001 a oa:Annotation ;
+    oa:hasTarget ex:article001 ;
+    oa:motivatedBy oa:classifying ;
+    ex:aboutCompany ex:vestas ;
+    oa:bodyValue "direct"^^xsd:string .
