@@ -1,14 +1,12 @@
 import requests
-import time
-from datetime import datetime, timezone
+from datetime import datetime
 import pandas as pd
 import trafilatura
 import yfinance as yf
 
 
 class DataFetcher:
-    def __init__(self, stocks: dict, session: requests.Session):
-        self.STOCKS = stocks
+    def __init__(self, session: requests.Session):
         self.session = session
 
     def get_article_body(self, url) -> str | None:
@@ -98,22 +96,41 @@ class DataFetcher:
             dict: A dictionary of dictionaries containing the news articles, or None if the articles could not be fetched.
         uses the endpoint https://query1.finance.yahoo.com/v1/finance/search to fetch the news articles.
         """
-        data = yf.Ticker(ticker)
+        try: 
+            data = yf.Ticker(ticker)
 
-        top_k_news = data.get_news(count=count)
+            top_k_news = data.get_news(count=count)
 
-        news_dict = {}
+            news_dict = {}
 
-        for article in top_k_news:
-            id = article.get("id")
-            content = article.get("content")
+            for article in top_k_news:
+                id = article.get("uuid")
+                content = article.get("content")
 
-            if content.get("finance").get("premiumFinance").get("isPremiumNews") == False:
-                pass
+                if content.get("finance").get("premiumFinance").get("isPremiumNews") == False:
+                    pass
 
-            else:
-                title = content.get("title")
-                date_object = datetime.fromisoformat(content.get("pubDate"))
-                publish_date = date_object.strftime("%Y/%m/%d")
-
+                else:
+                    title = content.get("title")
+                    date_object = datetime.fromisoformat(content.get("pubDate"))
+                    publish_date = date_object.strftime("%Y/%m/%d")
+                    url = content.get("canonicalUrl").get("url")
+                    article_body = self.get_article_body(url)
+                    news_dict[id] = {
+                        "uuid": id,
+                        "headline": title,
+                        "datePublished": publish_date,
+                        "url": url,
+                        "articleBody": article_body
+                    }
             
+            if len(news_dict) == 0:
+                print(f"No news articles found for {ticker}.")
+                return None
+            
+            else:
+                return news_dict
+        
+        except Exception as e:
+            print(f"Error fetching news articles for {ticker}: {e}")
+            return None

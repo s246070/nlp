@@ -1,0 +1,10 @@
+# Project runtime and API dependencies
+fastapi
+uvicorn[standard]
+python-dotenv
+openai
+rdflib
+requests
+pandas
+trafilatura
+yfinance

@@ -1,23 +1,12 @@
-@prefix ex: <https://example.org/stocks/> .
-@prefix oa: <http://www.w3.org/ns/oa#> .
-@prefix schema: <https://schema.org/> .
+@prefix ns1: <https://example.org/stocks/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:annotation-vestas-sector a oa:Annotation ;
-    oa:bodyValue "sector" ;
-    oa:hasTarget ex:article-renewable-rally ;
-    oa:motivatedBy oa:classifying ;
-    ex:aboutCompany ex:vestas .
+ns1:vws-co ns1:hasObservation ns1:vws-0001,
+        ns1:vws-2026-11-06 .
 
-ex:vestas a ex:Company ;
-    ex:hasListing ex:vws-co ;
-    schema:name "Vestas Wind Systems" .
+ns1:vws-0001 ns1:closePrice 205.5 ;
+    ns1:observationDate "2026-11-06"^^xsd:date .
 
-ex:vws-2026-11-06 ex:closePrice 205.5 .
-
-ex:vws-co a ex:StockListing ;
-    ex:currency "DKK" ;
-    ex:hasObservation ex:vws-2026-11-05,
-        ex:vws-2026-11-06 ;
-    ex:ticker "VWS.CO" .
+ns1:vws-2026-11-06 ns1:closePrice 205.5 ;
+    ns1:observationDate "2026-11-06"^^xsd:date .
 

@@ -5,7 +5,8 @@ from openai import OpenAI
 from rdflib import Graph, Namespace, Literal
 from rdflib.namespace import XSD
 import requests
-from backend.datafetcher import DataFetcher
+from project.backend.data_fetcher import DataFetcher
+from project.backend.stock_graph import GraphUpdater
 
 app = FastAPI()
 client = OpenAI()
@@ -47,7 +48,9 @@ session.headers.update({
 })
 
 # initialize the data fetcher
-data_fetcher = DataFetcher(STOCKS, session)
+data_fetcher = DataFetcher(session)
+# initialize the graph updater
+graph_updater = GraphUpdater(g, data_fetcher)s
 
 
 @app.post("/api/v1/update")
@@ -56,20 +59,16 @@ def update_graph():
 
 
 @app.get("/api/v1/reports/{ticker}")
-def get_reports(tickers: dict):
+def get_reports(tickers: str):
     """
     Retrieve the latest generated financial briefing for a selected company.
     Information is retrieved from the knowledge graph and presented as structured financial data 
     and LLM-generated summaries.
     
     args:
-        {
-        "tickers": [
-            "VWS.CO",
-            "NOVO-B.CO",
-            "ASML.AS"
-        ]
-        }
+        tickers (str): A comma-separated string of stock tickers to retrieve reports for.
+    returns:
+        dict: A dictionary containing the financial reports for the specified tickers.
     """
     pass
 

@@ -1,0 +1,67 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="9KWjGHH_hPnKKrseXju5">
+    <mxGraphModel dx="1030" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;b&gt;Company&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="350" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;b&gt;PriceObservation&lt;/b&gt;&lt;br&gt;&lt;div&gt;tradingDate&lt;/div&gt;&lt;div&gt;lowPrice&lt;/div&gt;&lt;div&gt;highPrice&lt;/div&gt;&lt;div&gt;openPrice&lt;/div&gt;&lt;div&gt;closePrice&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="120" x="190" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;oa:Annotation&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;oa:bodyValue&lt;/div&gt;&lt;/div&gt;&lt;div&gt;oa:motivatedBy&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="130" x="500" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;b&gt;schema:NewsArticle&lt;/b&gt;&lt;br&gt;&lt;div&gt;schema: headline&lt;/div&gt;&lt;div&gt;schema:datePublished&lt;/div&gt;&lt;div&gt;schema:url&lt;/div&gt;&lt;div&gt;schema:articleBody&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="130" x="500" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-5" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.627;entryY=0.993;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="VpcSxVThAZmkOAp9Vo1b-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="580" y="430" as="sourcePoint" />
+            <mxPoint x="580" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-6" edge="1" parent="1" source="VpcSxVThAZmkOAp9Vo1b-3" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="VpcSxVThAZmkOAp9Vo1b-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="550" y="110" as="sourcePoint" />
+            <mxPoint x="610" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-9" edge="1" parent="1" source="VpcSxVThAZmkOAp9Vo1b-1" style="endArrow=classic;html=1;rounded=0;exitX=-0.024;exitY=0.449;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="VpcSxVThAZmkOAp9Vo1b-20" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="205" y="130" as="sourcePoint" />
+            <mxPoint x="280" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-90;" value="oa:hasTarget" vertex="1">
+          <mxGeometry height="30" width="120" x="475" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=55;" value="aboutCompany" vertex="1">
+          <mxGeometry height="30" width="90" x="490" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-50;" value="hasListing" vertex="1">
+          <mxGeometry height="30" width="90" x="239.99822030013198" y="99.99548853827034" as="geometry" />
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;b&gt;StockListing&lt;/b&gt;&lt;div&gt;ticker&lt;/div&gt;&lt;div&gt;currency&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="120" x="190" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-90;" value="hasObservation" vertex="1">
+          <mxGeometry height="30" width="90" x="190" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-23" edge="1" parent="1" source="VpcSxVThAZmkOAp9Vo1b-20" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="VpcSxVThAZmkOAp9Vo1b-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="430" as="sourcePoint" />
+            <mxPoint x="430" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VpcSxVThAZmkOAp9Vo1b-25" edge="1" parent="1" source="VpcSxVThAZmkOAp9Vo1b-3" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="VpcSxVThAZmkOAp9Vo1b-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="370" as="sourcePoint" />
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

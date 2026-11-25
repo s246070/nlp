@@ -1,10 +1,14 @@
 # ignore environment files
 *.env
 # ignore python cache files
-*/__pycache__/
+*__pycache__/
 # ignore python virtual environment files
 .venv/
 # ignore vscode settings
 .vscode/
 # ignore datasets
 *data/*
+
+*Week/*
+
+*tests/*
