@@ -1,5 +1,0 @@
-httpx
-fastapi
-pydantic
-python-multipart
-uvicorn[standard]

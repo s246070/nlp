@@ -1,7 +1,0 @@
-fastapi
-python-multipart
-pymupdf
-spacy
-uvicorn[standard]
-# for minimal example
-#re
