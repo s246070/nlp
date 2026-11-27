@@ -1,15 +1,5 @@
-# ignore environment files
-*.env
-# ignore python cache files
-__pycache__/
-# ignore python virtual environment files
-.venv/
-# ignore vscode settings
-.vscode/
-# ignore datasets
-*data/*
-
-/Week_*/
-/Week_*.zip
-
+# Ignore everything outside project except this file
+/*
+!/project/
+!/.gitignore
 /project/tests/
